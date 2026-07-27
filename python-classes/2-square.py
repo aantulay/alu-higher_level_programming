@@ -1,6 +1,24 @@
 #!/usr/bin/python3
+"""Module that defines a Square class with validated size."""
+
+
 class Square:
+    """Represent a square.
+
+    The size of the square is validated on instantiation to make
+    sure it is a non-negative integer.
+    """
+
     def __init__(self, size=0):
+        """Initialize a new Square.
+
+        Args:
+            size (int): The size of the new square. Defaults to 0.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
