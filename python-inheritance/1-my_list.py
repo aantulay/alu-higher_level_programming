@@ -11,4 +11,3 @@ class MyList(list):
         The underlying list itself is left unmodified.
         """
         print(sorted(self))
-        
